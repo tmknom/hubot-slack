@@ -27,6 +27,14 @@ $ npm install
 $ export HUBOT_SLACK_TOKEN=xxxxxxxx
 ```
 
+### Github連携設定
+
+```bash
+$ export HUBOT_GITHUB_TOKEN=xxxxxxxx
+$ export HUBOT_GITHUB_USER=user_name
+$ export HUBOT_GITHUB_API=https://api.github.com
+```
+
 ### Hubotの起動
 
 ```bash
@@ -49,12 +57,6 @@ $ heroku create
 $ git push heroku master
 ```
 
-### HerokuのSlack連携設定
-
-```bash
-$ heroku config:add HUBOT_SLACK_TOKEN=xxxxxxxx
-```
-
 ### Herokuのアイドリング防止設定
 
 ```bash
@@ -65,6 +67,20 @@ $ heroku config:set HUBOT_HEROKU_KEEPALIVE_URL=$(heroku apps:info -s | grep web_
 
 ```bash
 $ heroku config:add TZ=Asia/Tokyo
+```
+
+### HerokuのSlack連携設定
+
+```bash
+$ heroku config:add HUBOT_SLACK_TOKEN=xxxxxxxx
+```
+
+### HerokuのGithub連携設定
+
+```bash
+$ heroku config:set HUBOT_GITHUB_TOKEN=xxxxxxxx
+$ heroku config:set HUBOT_GITHUB_USER=user_name
+$ heroku config:set HUBOT_GITHUB_API=https://api.github.com
 ```
 
 ### 動作確認
