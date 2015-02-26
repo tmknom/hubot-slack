@@ -5,13 +5,12 @@ class SlackMessenger
 
   # 投稿先の取得
   getRoom: (req) ->
-    return "#" + req.query.room # Slack
-    #return req.query.room
+    return req.query.room
 
 
   # 共通メッセージ作成
   createCommonMessage: (message, title, url, detail = "") ->
-    return "#{message}#{url}\n```#{detail}```"
+    return "#{message} #{url}#{detail}"
 
 
 module.exports = () ->
